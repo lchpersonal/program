@@ -10,6 +10,10 @@ public class InterceptorChain {
 
     private List<Interceptor> interceptors = new ArrayList<Interceptor>();
 
+    /**
+     * 对被代理对象进行层层包装
+     * @param target 被代理对象
+     */
     public Object pluginAll(Object target) {
         for (Interceptor interceptor : interceptors) {
             target = interceptor.warp(target);
