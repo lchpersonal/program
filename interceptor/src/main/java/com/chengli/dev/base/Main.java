@@ -18,6 +18,7 @@ public class Main {
     private static InterceptorChain getInterceptorChain(){
         InterceptorChain interceptorChain = new InterceptorChain();
         interceptorChain.addInterceptor(new MonitorInterceptor());
+        interceptorChain.addInterceptor(new StartLogInterceptor());
         return interceptorChain;
     }
 }

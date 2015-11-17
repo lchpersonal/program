@@ -21,10 +21,11 @@ public class Plugin implements InvocationHandler {
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        return interceptor.plugin(new Invocation((Class) target, method, args));
+        return interceptor.plugin(new Invocation(target, method, args));
     }
 
     public static Object wrap(Object target, Interceptor interceptor) {
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), new Class[]{interceptor.getClass()}, new Plugin(target, interceptor));
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(),
+                new Class[]{target.getClass().getInterfaces()[0]}, new Plugin(target, interceptor));
     }
 }

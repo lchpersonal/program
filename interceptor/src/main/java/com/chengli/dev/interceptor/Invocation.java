@@ -8,11 +8,11 @@ import java.lang.reflect.Method;
  */
 public class Invocation {
 
-    private Class clazz;
+    private Object clazz;
     private Method method;
     private Object[] args;
 
-    public Invocation(Class clazz, Method method, Object[] args) {
+    public Invocation(Object clazz, Method method, Object[] args) {
         this.clazz = clazz;
         this.method = method;
         this.args = args;
