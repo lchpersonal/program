@@ -20,6 +20,12 @@ public class Plugin implements InvocationHandler {
         this.interceptor = interceptor;
     }
 
+    /**
+     * @param proxy  生成的代理类对象
+     * @param method 调用的方法
+     * @param args   方法参数
+     */
+
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         return interceptor.plugin(new Invocation(target, method, args));
     }
