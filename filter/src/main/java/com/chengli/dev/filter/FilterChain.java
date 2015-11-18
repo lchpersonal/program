@@ -21,7 +21,11 @@ public class FilterChain implements Filter {
     }
 
     public String doFilter(String in, String out, FilterChain filterChain) throws Exception {
-        Filter filter = this.getFilters().get(index);
-        return filter.doFilter(in,out,filterChain);
+        if (index <= filters.size() - 1) {
+            Filter filter = this.getFilters().get(index);
+            index++;
+            return filter.doFilter(in, out, filterChain);
+        }
+        return in;
     }
 }

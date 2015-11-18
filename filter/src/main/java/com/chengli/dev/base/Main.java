@@ -7,11 +7,12 @@ import com.chengli.dev.filter.FilterChain;
  */
 public class Main {
 
-    private static String str = "你好啊,敏感信息，脏话";
+    private static String str = "你好啊,敏感信息，笑脸";
 
     public static void main(String[] args) throws Exception {
         FilterChain chain = new FilterChain();
         chain.addFilter(new SensitiveFilter());
-        System.out.println(chain.doFilter(str, null, chain));
+        chain.addFilter(new FaceIconFilter());
+        chain.doFilter(str, null, chain);
     }
 }
