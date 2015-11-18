@@ -6,7 +6,9 @@ import java.util.List;
 /**
  * Created by chengli on 2015/11/17.
  */
-public class FilterChain {
+public class FilterChain implements Filter {
+
+    private static int index = 0;
 
     private List<Filter> filters = new ArrayList<Filter>();
 
@@ -16,5 +18,10 @@ public class FilterChain {
 
     public List<Filter> getFilters() {
         return filters;
+    }
+
+    public String doFilter(String in, String out, FilterChain filterChain) throws Exception {
+        Filter filter = this.getFilters().get(index);
+        return filter.doFilter(in,out,filterChain);
     }
 }
