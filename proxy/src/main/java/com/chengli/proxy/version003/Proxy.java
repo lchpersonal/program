@@ -19,7 +19,7 @@ public class Proxy {
             methodStr += "    @Override\n" +
                     "    public void " + m.getName() + "() {\n" +
                     "       try{\n" +
-                    "           handler.invoke();\n" +
+                    "           handler.invoke(method,object);\n" +
                     "           }catch(Exception e){\n" +
                     "           }\n" +
                     "    }\n";
@@ -27,18 +27,23 @@ public class Proxy {
 
         /*动态编译这段代码*/
         String src = "package com.chengli.proxy.base;\n" +
-                "\n" + "import com.chengli.proxy.version003.InvocationHandler;\n\n" +
+                "\n" + "import com.chengli.proxy.version003.InvocationHandler;\n" +
+                "\n" + "import java.lang.reflect.Method;\n\n" +
                 "public class TankTimeProxy implements " + inter.getName() + " {\n" +
                 "    private InvocationHandler handler;\n" +
+                "    private Object object;\n" +
+                "    private Method method;\n" +
                 "\n" +
-                "    public TankTimeProxy(InvocationHandler handler) {\n" +
+                "    public TankTimeProxy(Object object, Method method, InvocationHandler handler) {\n" +
                 "        this.handler = handler;\n" +
+                "        this.object = object;\n" +
+                "        this.method = method;\n" +
                 "    }\n" +
                 "\n" +
                 methodStr +
                 "}";
         Class clazz = Complier.complie(src, "H:/com/chengli/proxy/base/TankTimeProxy.java");
-        Constructor constructor = clazz.getConstructor(InvocationHandler.class);
-        return constructor.newInstance(handler);
+        Constructor constructor = clazz.getConstructor(new Class[]{Object.class, Method.class, InvocationHandler.class,});
+        return constructor.newInstance(object, inter.getMethods()[0], handler);
     }
 }
