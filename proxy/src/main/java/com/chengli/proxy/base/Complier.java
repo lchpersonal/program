@@ -13,7 +13,7 @@ import java.net.URLClassLoader;
  */
 public class Complier {
 
-    public static Class complie(String src,String path) throws Exception {
+    public static Class complie(String src, String path) throws Exception {
         String fileName = System.getProperty("user.dir") + path;
         File file = new File(fileName);
         FileWriter fileWriter = new FileWriter(file);
@@ -22,15 +22,17 @@ public class Complier {
         fileWriter.close();
 
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-        StandardJavaFileManager fileMrg = compiler.getStandardFileManager(null,null,null);
+        StandardJavaFileManager fileMrg = compiler.getStandardFileManager(null, null, null);
         Iterable iterable = fileMrg.getJavaFileObjects(fileName);
-        JavaCompiler.CompilationTask  compilationTask = compiler.getTask(null,fileMrg,null,null,null,iterable);
+        JavaCompiler.CompilationTask compilationTask = compiler.getTask(null, fileMrg, null, null, null, iterable);
         compilationTask.call();
         fileMrg.close();
 
-        URL[] urls = new URL[]{new URL("file:/"+System.getProperty("user.dir")+"/proxy/target/classes")};
+        URL[] urls = new URL[]{new URL("file:/" + System.getProperty("user.dir") + "/proxy/target/classes")};
         URLClassLoader classLoader = new URLClassLoader(urls);
         Class clazz = classLoader.loadClass("com.chengli.proxy.version002.TankTimeProxy");
+        /*删除生成的java文件*/
+        file.delete();
         return clazz;
     }
 }
