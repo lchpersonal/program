@@ -14,6 +14,7 @@
         <module>filter</module>
         <module>interceptor</module>
         <module>strategy</module>
+        <module>proxy</module>
     </modules>
 
 </project>
