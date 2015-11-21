@@ -13,11 +13,9 @@ public class Proxy {
 
     public static Object newProxyInstance(Object object) throws Exception {
         /*动态编译这段代码*/
-        String src = "package com.chengli.proxy.version002;\n" +
+        String src = "package com.chengli.proxy.base;\n" +
                 "\n" +
-                "import com.chengli.proxy.base.Moveable;\n" +
-                "\n" +
-                "class TankTimeProxy implements Moveable {\n" +
+                "public class TankTimeProxy implements Moveable {\n" +
                 "    private Moveable moveable;\n" +
                 "\n" +
                 "    public TankTimeProxy(Moveable moveable) {\n" +
@@ -31,7 +29,7 @@ public class Proxy {
                 "        System.out.println(\"endTime:\" + System.currentTimeMillis());\n" +
                 "    }\n" +
                 "}";
-        Class clazz = Complier.complie(src, "/proxy/src/main/java/com/chengli/proxy/version002/TankTimeProxy.java");
+        Class clazz = Complier.complie(src, "H:/com/chengli/proxy/base/TankTimeProxy.java");
         Constructor constructor = clazz.getConstructor(Moveable.class);
         return constructor.newInstance(object);
     }
