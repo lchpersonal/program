@@ -16,6 +16,7 @@
         <module>strategy</module>
         <module>proxy</module>
         <module>bridge</module>
+        <module>jvm</module>
     </modules>
 
 </project>
