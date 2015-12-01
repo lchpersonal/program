@@ -4,7 +4,7 @@ import com.chengli.proxy.base.Moveable;
 import com.chengli.proxy.base.Tank;
 
 /**
- * 生成任意实现的动态代理
+ * 生成任意实现的动态代理(模拟jdk的动态代理)
  * Created by chengli on 2015/11/21.
  */
 public class Main003 {
