@@ -14,7 +14,6 @@ public class Test0030 {
     }
 }
 
-
 class Parent{
     static int a = 3;
 

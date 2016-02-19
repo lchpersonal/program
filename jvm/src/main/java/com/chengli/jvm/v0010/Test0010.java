@@ -30,7 +30,6 @@ package com.chengli.jvm.v0010;
  * </pre>
  */
 
-
 class Singleton1 {
     private static Singleton1 singleton = new Singleton1();
     public static int counter1;
