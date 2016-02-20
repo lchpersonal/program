@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * java 堆溢出
+ * <p>
  * VM Args : -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
  * <p>
  * 限制堆大小为20M
