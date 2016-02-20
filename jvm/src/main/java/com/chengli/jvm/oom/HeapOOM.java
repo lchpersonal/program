@@ -7,8 +7,11 @@ import java.util.List;
  * VM Args : -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
  * <p>
  * 限制堆大小为20M
+ * <p>
+ * <pre>
  * 异常：
- * java.lang.OutOfMemoryError: Java heap space
+ *     java.lang.OutOfMemoryError: Java heap space
+ * </pre>
  * Created by chengli on 2016/2/20.
  */
 public class HeapOOM {
