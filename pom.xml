@@ -17,8 +17,8 @@
         <module>proxy</module>
         <module>bridge</module>
         <module>jvm</module>
-        <module>transaction</module>
         <module>java8</module>
+        <module>base</module>
     </modules>
 
     <properties>
