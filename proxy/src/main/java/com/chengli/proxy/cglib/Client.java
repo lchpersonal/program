@@ -7,7 +7,7 @@ package com.chengli.proxy.cglib;
 public class Client {
 
     public static void main(String[] args) {
-        BookServiceBean service = BookServiceFactory.getProxyInstance(new MyCglibProxy("张三1"));
+        BookServiceBean service = BookServiceFactory.getProxyInstance(new MyCglibProxy("boss"));
         doMethod(service);
     }
 

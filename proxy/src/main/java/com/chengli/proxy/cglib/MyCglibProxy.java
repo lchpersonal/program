@@ -7,26 +7,10 @@ import org.apache.log4j.Logger;
 
 public class MyCglibProxy implements MethodInterceptor {
     private Logger log = Logger.getLogger(MyCglibProxy.class);
-    public Enhancer enhancer = new Enhancer();
     private String name;
 
     public MyCglibProxy(String name) {
         this.name = name;
-    }
-
-    /**
-     * 根据class对象创建该对象的代理对象
-     * 1、设置父类；2、设置回调
-     * 本质：动态创建了一个class对象的子类
-     *
-     * @param cls
-     * @return
-     */
-    public Object getDaoBean(Class cls) {
-        enhancer.setSuperclass(cls);
-        enhancer.setCallbackFilter(new MyProxyFilter());
-        enhancer.setCallbacks(new Callback[]{this, NoOp.INSTANCE});
-        return enhancer.create();
     }
 
     @Override
