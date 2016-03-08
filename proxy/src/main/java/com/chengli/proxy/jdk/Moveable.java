@@ -6,4 +6,6 @@ package com.chengli.proxy.jdk;
 public interface Moveable {
 
     void move();
+
+    void bark();
 }

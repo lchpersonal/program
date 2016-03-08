@@ -12,5 +12,6 @@ public class MianClazz {
         LogInvocationHandler handler = new LogInvocationHandler(dog);
         Moveable moveable = (Moveable) Proxy.newProxyInstance(dog.getClass().getClassLoader(), new Class[]{Moveable.class}, handler);
         moveable.move();
+        moveable.bark();
     }
 }
