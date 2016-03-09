@@ -14,4 +14,5 @@ public class Dog implements Moveable {
     public void bark() {
         System.out.println("this dog is barking ~~ ");
     }
+
 }
