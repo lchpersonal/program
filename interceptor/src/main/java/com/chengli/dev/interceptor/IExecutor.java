@@ -6,4 +6,5 @@ package com.chengli.dev.interceptor;
 public interface IExecutor {
 
     void run();
+
 }

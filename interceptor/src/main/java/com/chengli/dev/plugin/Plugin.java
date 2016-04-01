@@ -29,9 +29,4 @@ public class Plugin implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         return interceptor.plugin(new Invocation(target, method, args));
     }
-
-    public static Object wrap(Object target, Interceptor interceptor) {
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(),
-                target.getClass().getInterfaces(), new Plugin(target, interceptor));
-    }
 }

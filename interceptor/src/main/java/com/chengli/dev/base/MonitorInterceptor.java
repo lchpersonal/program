@@ -2,7 +2,6 @@ package com.chengli.dev.base;
 
 import com.chengli.dev.interceptor.Interceptor;
 import com.chengli.dev.interceptor.Invocation;
-import com.chengli.dev.plugin.Plugin;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -17,9 +16,5 @@ public class MonitorInterceptor implements Interceptor {
         long endTime = System.currentTimeMillis();
         System.out.println(String.format("run cost: %s ms", (endTime - beginTime)));
         return result;
-    }
-
-    public Object warp(Object target) {
-        return Plugin.wrap(target, this);
     }
 }

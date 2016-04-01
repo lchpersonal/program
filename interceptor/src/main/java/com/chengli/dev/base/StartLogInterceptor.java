@@ -2,7 +2,6 @@ package com.chengli.dev.base;
 
 import com.chengli.dev.interceptor.Interceptor;
 import com.chengli.dev.interceptor.Invocation;
-import com.chengli.dev.plugin.Plugin;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -18,7 +17,4 @@ public class StartLogInterceptor implements Interceptor {
         return result;
     }
 
-    public Object warp(Object target) {
-        return Plugin.wrap(target, this);
-    }
 }

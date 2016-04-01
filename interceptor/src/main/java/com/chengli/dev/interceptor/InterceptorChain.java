@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class InterceptorChain {
 
-    private List<Interceptor> interceptors = new ArrayList<Interceptor>();
+    private List<Interceptor> interceptors = new ArrayList<>();
 
     /**
      * 对被代理对象进行层层包装(代理)
@@ -17,7 +17,7 @@ public class InterceptorChain {
      */
     public Object pluginAll(Object target) {
         for (Interceptor interceptor : interceptors) {
-            target = interceptor.warp(target);
+            target = interceptor.wrap(target);
         }
         return target;
     }

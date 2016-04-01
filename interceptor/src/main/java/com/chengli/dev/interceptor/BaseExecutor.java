@@ -6,6 +6,7 @@ package com.chengli.dev.interceptor;
 public class BaseExecutor implements IExecutor {
 
     public void run() {
-        System.out.println("executor is runnint~~");
+        System.out.println("executor is running~~");
     }
+
 }
