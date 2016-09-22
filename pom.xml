@@ -19,6 +19,7 @@
         <module>jvm</module>
         <module>java8</module>
         <module>base</module>
+        <module>netty</module>
     </modules>
 
     <properties>
