@@ -38,7 +38,7 @@ public class WaitMethod {
         synchronized (o) {
             //理解为t这个线程需要被别人的等待。实际等待的是主线程
             System.out.println("befroe wait~~" + Thread.currentThread().getName());
-            o.wait();
+            o.wait(1000);
             Thread.sleep(5000);
             System.out.println("after wait~~" + Thread.currentThread().getName());
             //Thread.currentThread().wait();
