@@ -14,7 +14,7 @@ public class Test0030 {
     }
 }
 
-class Parent{
+class Parent {
     static int a = 3;
 
     static {
@@ -22,7 +22,7 @@ class Parent{
     }
 }
 
-class Child extends  Parent{
+class Child extends Parent {
     static int b = 4;
 
     static {
