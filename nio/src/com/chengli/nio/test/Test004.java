@@ -17,7 +17,7 @@ public class Test004 {
         if (buffer.hasArray()) {
             char[] bufferArr = buffer.array();
             for (int i = 0; i < bufferArr.length; i++) {
-                System.out.print(i + ":" + bufferArr[i]+"\t ");
+                System.out.print(i + ":" + bufferArr[i] + "\t ");
             }
         }
 
@@ -28,7 +28,7 @@ public class Test004 {
         if (buffer.hasArray()) {
             char[] bufferArr = buffer.array();
             for (int i = 0; i < bufferArr.length; i++) {
-                System.out.print(i + ":" + bufferArr[i]+"\t");
+                System.out.print(i + ":" + bufferArr[i] + "\t");
             }
         }
 

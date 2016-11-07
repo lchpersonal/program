@@ -20,6 +20,7 @@
         <module>java8</module>
         <module>base</module>
         <module>netty</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>
