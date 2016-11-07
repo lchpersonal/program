@@ -28,7 +28,6 @@ public class EleTree {
         }
     }
 
-
     private int preWeight = Integer.MAX_VALUE;
 
     public int getAvgPoint() {
@@ -42,7 +41,6 @@ public class EleTree {
         }
         return 0;
     }
-
 
     private List<Integer> result = new ArrayList(nodeCount);
 
