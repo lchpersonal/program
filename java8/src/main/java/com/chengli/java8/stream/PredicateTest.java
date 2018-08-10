@@ -1,6 +1,4 @@
-package com.chengli.java8.lambda;
-
-import com.chengli.java8.lambda.base.Name;
+package com.chengli.java8.stream;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +9,7 @@ import java.util.function.Predicate;
  */
 public class PredicateTest {
 
-    private static final Name[] NAMES = new Name[]{
+/*    private static final Name[] NAMES = new Name[]{
             new Name("Sally", "Smith"), new Name("Li", "Cheng"), new Name("haha", "wawa"),new Name("Queue", "Queue")};
 
     private static void printNames(String caption, Name[] names) {
@@ -31,5 +29,5 @@ public class PredicateTest {
         Predicate<Name> pred2 = name -> "Queue".equals(name.getLastName());
         list.removeIf(pred1.or(pred2));
         printNames("Names filtered by predicate:", list.toArray(new Name[list.size()]));
-    }
+    }*/
 }

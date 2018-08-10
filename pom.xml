@@ -21,6 +21,7 @@
         <module>base</module>
         <module>netty</module>
         <module>algorithm</module>
+        <module>learnjedis</module>
     </modules>
 
     <properties>
@@ -98,11 +99,11 @@
             <artifactId>mybatis-spring</artifactId>
             <version>${mybatis.spring.version}</version>
         </dependency>
-        <dependency>
+  <!--      <dependency>
             <groupId>com.baitian.fourb</groupId>
             <artifactId>fourb-common</artifactId>
             <version>${fourb-common.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -113,6 +114,12 @@
             <artifactId>cglib</artifactId>
             <version>3.1</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
 
     </dependencies>
 <!--

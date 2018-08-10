@@ -12,7 +12,7 @@ import java.nio.channels.FileLock;
  * Case 1:  your java app lock file, then other software (e.g. notepad) can't modify and save the locked file
  * Case 2:  When another software (e.g. Excel) lock a file, if your java app try to lock it, will throw FileNotFoundException
  * Case 3: if you try to lock file  more than once in same thread or different thread, it will throw OverlappingFileLockException
- * Case 4: when one JVM is locking a file, if u try to call tryLock/Lock method in another JVM, tryLock method returns null immediately, lock method blocks until the previous JVM release lock.
+ * Case 4: when lesson1 JVM is locking a file, if u try to call tryLock/Lock method in another JVM, tryLock method returns null immediately, lock method blocks until the previous JVM release lock.
  * <p>
  * Created by chengli on 2016/9/20.
  */

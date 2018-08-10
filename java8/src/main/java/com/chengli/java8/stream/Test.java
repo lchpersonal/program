@@ -1,4 +1,4 @@
-package com.chengli.java8.lambda;
+package com.chengli.java8.stream;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -6,7 +6,8 @@ import java.util.stream.Stream;
 /**
  * Created by chengli on 2016/1/28.
  */
-public class Test {
+public class
+Test {
 
     public static void main(String[] args) {
         //List<User> users = Stream.of();

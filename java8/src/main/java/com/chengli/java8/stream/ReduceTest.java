@@ -1,4 +1,4 @@
-package com.chengli.java8.lambda;
+package com.chengli.java8.stream;
 
 import java.util.stream.Stream;
 
