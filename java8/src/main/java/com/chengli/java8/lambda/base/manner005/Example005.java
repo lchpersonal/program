@@ -1,7 +1,7 @@
-package com.chengli.java8.base.manner005;
+package com.chengli.java8.lambda.base.manner005;
 
-import com.chengli.java8.base.Employee;
-import com.chengli.java8.base.EmployeeUtil;
+import com.chengli.java8.lambda.base.Employee;
+import com.chengli.java8.lambda.base.EmployeeUtil;
 import org.junit.Test;
 
 import java.util.Arrays;

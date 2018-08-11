@@ -1,4 +1,4 @@
-package com.chengli.java8.base;
+package com.chengli.java8.lambda.base;
 
 /**
  * @Author: chengli

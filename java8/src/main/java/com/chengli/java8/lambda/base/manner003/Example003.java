@@ -1,8 +1,8 @@
-package com.chengli.java8.base.manner003;
+package com.chengli.java8.lambda.base.manner003;
 
-import com.chengli.java8.base.Employee;
-import com.chengli.java8.base.EmployeeFilter;
-import com.chengli.java8.base.EmployeeUtil;
+import com.chengli.java8.lambda.base.Employee;
+import com.chengli.java8.lambda.base.EmployeeFilter;
+import com.chengli.java8.lambda.base.EmployeeUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.chengli.java8.lambda;
+package com.chengli.java8.lambda.summary;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -5,4 +5,4 @@
  * 方式二：
  * 通过策略模式来实现不同需求的员工筛选
  */
-package com.chengli.java8.base.manner002;
+package com.chengli.java8.lambda.base.manner002;

@@ -1,7 +1,7 @@
-package com.chengli.java8.base.manner002;
+package com.chengli.java8.lambda.base.manner002;
 
-import com.chengli.java8.base.Employee;
-import com.chengli.java8.base.EmployeeFilter;
+import com.chengli.java8.lambda.base.Employee;
+import com.chengli.java8.lambda.base.EmployeeFilter;
 
 /**
  * @Author: chengli

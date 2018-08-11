@@ -1,4 +1,4 @@
-package com.chengli.java8.base;
+package com.chengli.java8.lambda.base;
 
 import java.util.Arrays;
 import java.util.List;
