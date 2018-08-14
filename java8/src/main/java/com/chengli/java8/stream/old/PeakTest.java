@@ -1,4 +1,4 @@
-package com.chengli.java8.stream;
+package com.chengli.java8.stream.old;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

@@ -1,4 +1,4 @@
-package com.chengli.java8.stream;
+package com.chengli.java8.stream.old;
 
 import java.util.ArrayList;
 import java.util.List;

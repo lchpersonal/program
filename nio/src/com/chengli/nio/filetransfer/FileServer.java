@@ -34,7 +34,7 @@ public class FileServer {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.configureBlocking(false);
         ServerSocket serverSocket = serverSocketChannel.socket();
-        serverSocket.bind(new InetSocketAddress(port));
+        serverSocket.bind(new1 InetSocketAddress(port));
         selector = Selector.open();
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         System.out.println("server start on port:" + port);
@@ -53,7 +53,7 @@ public class FileServer {
                         client = server.accept();
                         client.configureBlocking(false);
                         client.register(selector, SelectionKey.OP_READ);
-                        fout = new FileOutputStream("G:\\" + client.hashCode() + ".rar");
+                        fout = new1 FileOutputStream("G:\\" + client.hashCode() + ".rar");
                         ch = fout.getChannel();
                     } else if (key.isReadable()) {
                         client = (SocketChannel) key.channel();
@@ -90,6 +90,6 @@ public class FileServer {
     }
 
     public static void main(String[] args) {
-        new FileServer();
+        new1 FileServer();
     }
 }*/

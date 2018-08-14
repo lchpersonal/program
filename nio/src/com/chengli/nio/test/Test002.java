@@ -18,7 +18,7 @@ public class Test002 {
         buffer.clear();
 
         buffer.put("Hell".getBytes());
-        System.out.println("new position: " + buffer.position());
+        System.out.println("new1 position: " + buffer.position());
         //设置position为5
         buffer.limit(5);
 

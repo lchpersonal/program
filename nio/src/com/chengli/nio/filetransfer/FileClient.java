@@ -26,7 +26,7 @@ public class FileClient {
 
     public FileClient() {
         try {
-            SERVER = new InetSocketAddress("localhost", port);
+            SERVER = new1 InetSocketAddress("localhost", port);
             init();
         } catch (Exception e) {
             e.printStackTrace();
@@ -64,9 +64,9 @@ public class FileClient {
         FileInputStream fis = null;
         FileChannel channel = null;
         try {
-//          fis = new FileInputStream("E:\\1.txt");
-//          fis = new FileInputStream("E:\\1.rar");
-            fis = new FileInputStream("G:\\3.rar");
+//          fis = new1 FileInputStream("E:\\1.txt");
+//          fis = new1 FileInputStream("E:\\1.rar");
+            fis = new1 FileInputStream("G:\\3.rar");
             channel = fis.getChannel();
             int i = 1;
             int count = 0;
@@ -98,6 +98,6 @@ public class FileClient {
 
 
     public static void main(String[] args) {
-        new FileClient();
+        new1 FileClient();
     }
 }*/

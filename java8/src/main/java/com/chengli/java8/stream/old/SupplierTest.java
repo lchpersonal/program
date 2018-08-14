@@ -1,26 +1,28 @@
-package com.chengli.java8.stream;
+package com.chengli.java8.stream.old;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import java.util.Random;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
  * Created by chengli on 2016/1/28.
  */
-public class GroupingbyTest {
+public class SupplierTest {
 
     public static void main(String[] args) {
-        Map<Integer, List<Person>> personGroups = Stream.generate(new PersonSupplier()).
-                limit(100).collect(Collectors.groupingBy(Person::getAge));
-        Iterator it = personGroups.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry<Integer, List<Person>> persons = (Map.Entry) it.next();
-            System.out.println("Age " + persons.getKey() + " = " + persons.getValue().size());
-        }
+        Random seed = new Random();
+        Supplier<Integer> random = seed::nextInt;
+        Stream.generate(random).limit(10).forEach(System.out::println);
+
+        //Another way
+        IntStream.generate(() -> (int) (System.nanoTime() % 100)).
+                limit(10).forEach(System.out::println);
+
+        //自己实现Supplier
+        Stream.generate(new PersonSupplier()).
+                limit(10).
+                forEach(p -> System.out.println(p.getName() + ", " + p.getAge()));
     }
 
     private static class PersonSupplier implements Supplier<Person> {

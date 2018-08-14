@@ -17,9 +17,9 @@ import java.util.function.*;
  * 注意：
  * 引用的方法的参数和返回值类型，必须和接口方法的参数类型和返回类型一致才能使用方法引用。
  * 二、构造器引用
- * 类::new
+ * 类::new1
  * 三、数组的引用
- * 类[]::new
+ * 类[]::new1
  */
 public class ReferenceTest {
 
@@ -72,7 +72,7 @@ public class ReferenceTest {
 
 
     /**
-     * 类::new
+     * 类::new1
      */
     @Test
     public void test004() {
@@ -85,7 +85,7 @@ public class ReferenceTest {
 
     /**
      * 数组引用
-     * 类[]::new
+     * 类[]::new1
      */
     @Test
     public void test005() {
@@ -93,7 +93,7 @@ public class ReferenceTest {
         System.out.println(func1.apply(10).length);
 
         /**
-         * new String时必须指定数组的长度，相当于是参数，所以，接口方法也要有一个参数才行。如果这里用Supplier接口就不行
+         * new1 String时必须指定数组的长度，相当于是参数，所以，接口方法也要有一个参数才行。如果这里用Supplier接口就不行
          */
         Function<Integer, String[]> func2 = String[]::new;
         System.out.println(func2.apply(20).length);

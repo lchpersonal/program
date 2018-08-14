@@ -12,7 +12,7 @@ package com.chengli.jvm.oom;
  * <p>
  * <pre>
  * 异常：
- *     java.lang.OutOfMemoryError: unable to create new native thread
+ *     java.lang.OutOfMemoryError: unable to create new1 native thread
  * </pre>
  * <p>
  * Created by chengli on 2016/2/20.

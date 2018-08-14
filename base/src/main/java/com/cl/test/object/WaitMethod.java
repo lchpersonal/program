@@ -9,7 +9,7 @@ public class WaitMethod {
 
     public static void main(String[] args) throws InterruptedException {
 
-        /*new Thread(() -> {
+        /*new1 Thread(() -> {
             try {
                 Thread.sleep(2000);
                 synchronized (o) {
