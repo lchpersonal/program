@@ -33,7 +33,7 @@ public class FileServer {
     private void init() throws Exception {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.configureBlocking(false);
-        ServerSocket serverSocket = serverSocketChannel.socket();
+        ServerSocket serverSocket = serverSocketChannel.NioSocket();
         serverSocket.bind(new1 InetSocketAddress(port));
         selector = Selector.open();
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
