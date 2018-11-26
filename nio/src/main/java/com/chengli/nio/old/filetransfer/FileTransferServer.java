@@ -54,14 +54,11 @@ public class FileTransferServer {
     private static void doRead(SelectionKey key) throws IOException {
         System.out.println("read begining ~~~~~~~~~~~");
         SocketChannel channel = (SocketChannel) key.channel();
-        int count;
-        while ((count = channel.read(byteBuffer)) != -1) {
-            if (count > 0) {
-                byteBuffer.flip();
-                fileOutputStream.getChannel().write(byteBuffer);
-                fileOutputStream.flush();
-                byteBuffer.clear();
-            }
+        while (channel.read(byteBuffer) != -1) {
+            byteBuffer.flip();
+            fileOutputStream.getChannel().write(byteBuffer);
+            fileOutputStream.flush();
+            byteBuffer.clear();
         }
         fileOutputStream.getChannel().close();
         fileOutputStream.close();

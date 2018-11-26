@@ -17,10 +17,11 @@ public class FileLockTest2 {
     }
 
     private static void readFromFile(String fileName) throws Exception {
-        RandomAccessFile raf = new RandomAccessFile(fileName, "rw");
-        FileChannel channel = raf.getChannel();
+        RandomAccessFile raf1 = new RandomAccessFile(fileName, "rw");
+        FileChannel channel = raf1.getChannel();
+
         FileLock lock = channel.lock();
-        ByteBuffer byteBuffer = ByteBuffer.allocate(100);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(200);
         while (channel.read(byteBuffer) != -1) {
             byteBuffer.flip();
             while (byteBuffer.hasRemaining()) {

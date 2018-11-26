@@ -31,9 +31,11 @@ public class FileLockTest1 {
         ByteBuffer byteBuffer = ByteBuffer.allocate(100);
         while (channel.read(byteBuffer) != -1) {
             byteBuffer.flip();
+            String context = "";
             while (byteBuffer.hasRemaining()) {
-                System.out.print((char) byteBuffer.get());
+                context += (char) byteBuffer.get();
             }
+            System.out.println(context);
             byteBuffer.clear();
         }
         System.out.println();

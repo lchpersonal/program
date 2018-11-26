@@ -1,12 +1,13 @@
 package com.chengli.nio.old.selector;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.nio.ByteBuffer;
-import java.nio.channels.*;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
 import java.util.Iterator;
-import java.util.Set;
 
 /**
  * Created by chengli on 2016/9/21.
@@ -21,8 +22,7 @@ public class SelectorServer {
         while (true) {
             int num = selector.select();
             if (num > 0) {
-                Set<SelectionKey> keys = selector.selectedKeys();
-                Iterator<SelectionKey> iterator = keys.iterator();
+                Iterator<SelectionKey> iterator =  selector.selectedKeys().iterator();
                 while (iterator.hasNext()) {
                     SelectionKey key = iterator.next();
                     if ((key.readyOps() & SelectionKey.OP_ACCEPT) == SelectionKey.OP_ACCEPT) {
@@ -37,7 +37,7 @@ public class SelectorServer {
         }
     }
 
-    private static void doRead(SelectionKey key) throws IOException {
+    private static void doRead(SelectionKey key) {
         if (key.isReadable()) {
             try {
                 SocketChannel socketChannel = (SocketChannel) key.channel();
